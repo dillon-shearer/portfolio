@@ -14,9 +14,9 @@ To set up this project, follow these steps:
 ## Usage
 
 To run the scripts, navigate to the project directory and execute the Python scripts in the following order:
-1. Data Acquisition: 1_data_acquisition.py
-2. Data Preprocessing and Cleaning: 2_data_preprocessing.py
-3. Exploratory Data Analysis (EDA): 3_data_eda.py
+1. Data Acquisition: 1_data_acquisition.ipynb
+2. Data Preprocessing and Cleaning: 2_data_preprocessing.ipynb
+3. Exploratory Data Analysis (EDA): 3_data_eda.ipynb
 
 ## Data Analysis Workflow
 
