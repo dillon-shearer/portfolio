@@ -9,7 +9,7 @@ To set up this project, follow these steps:
 
 1. Clone the repository to your local machine.
 2. Install the required packages using:
-   pip install -r requirements.txt
+   <br>*pip install -r requirements.txt*
 
 ## Usage
 
