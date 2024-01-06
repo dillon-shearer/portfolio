@@ -16,6 +16,6 @@ jobs:
       run: pip install nbconvert
     - name: Convert Notebooks
       run: |
-        jupyter nbconvert --to script ../portfolio/census_Poverty/1_data_Acquisition.ipynb
-        jupyter nbconvert --to script ../portfolio/census_Poverty/2_data_Pre_Processing.ipynb
-        jupyter nbconvert --to script ../portfolio/census_Poverty/3_data_Visualization_and_Exploration.ipynb
+        jupyter nbconvert --to script /portfolio/census_Poverty/1_data_Acquisition.ipynb
+        jupyter nbconvert --to script /portfolio/census_Poverty/2_data_Pre_Processing.ipynb
+        jupyter nbconvert --to script /portfolio/census_Poverty/3_data_Visualization_and_Exploration.ipynb
