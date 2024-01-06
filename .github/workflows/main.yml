@@ -19,3 +19,14 @@ jobs:
         jupyter nbconvert --to script ./census_Poverty/1_data_Acquisition.ipynb
         jupyter nbconvert --to script ./census_Poverty/2_data_Pre_Processing.ipynb
         jupyter nbconvert --to script ./census_Poverty/3_data_Visualization_and_Exploration.ipynb
+    - name: Commit files
+      run: |
+        git config --local user.email "action@github.com"
+        git config --local user.name "GitHub Action"
+        git add -A
+        git commit -m "Add converted Python scripts" -a    
+    - name: Push changes
+      uses: ad-m/github-push-action@master
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        force: true
