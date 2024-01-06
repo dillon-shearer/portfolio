@@ -7,58 +7,28 @@
 # -----
 
 # ##### Import Libraries 
-
-# In[30]:
-
-
 import pandas as pd
 import matplotlib.pyplot as plt
 import numpy as np
 import plotly.express as px
 import plotly
 
-# In[31]:
-
-
 # Command to initialize offline notebook for NBViewer use
 plotly.offline.init_notebook_mode()
 
 # ##### Load dataframe from 2_data_Pre_Processing output (data/CLEANED_2022_SAIPE_DATA.xlsx)
-
-# In[32]:
-
-
 clean_data_filepath = '../census_Poverty/data/CLEANED_2022_SAIPE_DATA.xlsx'
 df = pd.read_excel(clean_data_filepath)
 
-# ##### Check data
-
-# In[33]:
-
-
 df.head()
-
-# ----
-# ##### **1** - National level data EDA
-# **Filter dataframe instance to only national level (where POSTAL_CODE = 'US')**
-
-# In[1]:
-
 
 # Create secondary dataframe to hold only National data
 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
-
-# In[35]:
-
 
 # Check results
 df_national.head()
 
 # **Display information of interest**
-
-# In[36]:
-
-
 print('Location: ' + df_national['REGION_NAME'].values[0]
       + '\n-----\nPoverty Estimate for ALL Ages (int): ' + str(df_national['ALL_AGES_POVERTY_ESTIMATE'].values[0])
       + '\nPoverty Estimate for ALL Ages (percent): ' + str(df_national['ALL_AGES_POVERTY_PERCENT'].values[0]) + '%'
@@ -66,11 +36,6 @@ print('Location: ' + df_national['REGION_NAME'].values[0]
       + '\nPoverty Estimate for Ages 0-17 (percent): ' + str(df_national['0_17_POVERTY_PERCENT'].values[0]) + '%'
       + '\n-----\nMedian Household Income: $' + str(df_national['MEDIAN_HOUSEHOLD_INCOME'].values[0])
       )
-
-# **Create bar chart of poverty rates (national)**
-
-# In[37]:
-
 
 # Data
 categories = ['All Ages', 'Ages 0-17']
@@ -103,20 +68,10 @@ plt.show()
 # -----
 # ##### **2** - State-level EDA
 # **Filter dataframe instance to only state level (where POSTAL_CODE != 'US')**
-
-# In[38]:
-
-
 # Create secondary dataframe to hold only State data
 df_state = df[df['REGION_TYPE'] == 'STATE']
 
-# In[39]:
-
-
 df_state.info()
-
-# In[46]:
-
 
 # Create statistics for All Ages **Poverty Percent**
 df_state['ALL_AGES_POVERTY_PERCENT'].describe()
@@ -132,10 +87,6 @@ df_state['ALL_AGES_POVERTY_PERCENT'].describe()
 # From these statistics, we can infer that while the majority of states have poverty rates close to the national average, there are some states with significantly higher poverty percentages, which increase the mean above the median. The state with the highest poverty rate (19.2%) is an outlier, considerably higher than the 75th percentile of 13.35%.
 
 # **Create filled map of Poverty Percentages (ALL Ages) by State**
-
-# In[47]:
-
-
 # Create the choropleth map
 fig = px.choropleth(
     df_state,
@@ -154,10 +105,6 @@ fig.show()
 # The distribution suggests that while many states have moderate poverty rates, a few states have particularly high rates that could be driving the national average up. These states might require more focused interventions to address poverty. It would also be insightful to look at these states' economic conditions, unemployment rates, and other social factors that could be contributing to the higher poverty levels.
 
 # **Create filled map of Poverty Percentages (age 0-17) by State**
-
-# In[48]:
-
-
 # Create the choropleth map
 fig = px.choropleth(
     df_state,
@@ -176,10 +123,6 @@ fig.show()
 # -----
 # ##### **3** - Median Income Analysis
 # **Create horizontal bar chart of Median Income by state**
-
-# In[49]:
-
-
 # Filter the data to exclude the 'US' aggregate row and select only the required columns
 df_median_income = df[df['REGION_TYPE'] == 'STATE'][['POSTAL_CODE', 'MEDIAN_HOUSEHOLD_INCOME']]
 
@@ -200,10 +143,6 @@ fig_income = px.bar(
 
 fig_income.show()
 
-# **Create filled map of Median Household Income by state**
-
-# In[50]:
-
 
 # Create the choropleth map
 fig = px.choropleth(
@@ -221,10 +160,6 @@ fig = px.choropleth(
 fig.show()
 
 # **Create scatter plot of Poverty Rate vs. Median Household Income by state**
-
-# In[51]:
-
-
 # Create the scatter plot using Plotly
 fig_scatter = px.scatter(
     df_state,
