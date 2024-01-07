@@ -10,6 +10,6 @@ choice = st.sidebar.radio("Go to", ["Home", "Analysis"])
 if __name__ == "__app__":
     # Page routing
     if choice == "Home":
-        home.show_home()
+        home.show()
     elif choice == "Analysis":
-        analysis.show_analysis()
+        analysis.show()
