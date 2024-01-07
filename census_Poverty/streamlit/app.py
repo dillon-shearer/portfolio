@@ -11,3 +11,5 @@ if choice == "Home":
     home.show()
 elif choice == "Analysis":
     analysis.show()
+
+st.show("test")
