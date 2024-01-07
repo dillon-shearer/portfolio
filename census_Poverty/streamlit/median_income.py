@@ -21,6 +21,8 @@ def show():
     # User selects map level
     map_level = st.selectbox("Select Map Level", ["National", "State", "County"])
 
+# NATIONAL DISPLAY
+
     # Display map based on user selection
     if map_level == "National":
         df_national = df[df['REGION_TYPE'] == 'NATIONAL']
@@ -35,7 +37,7 @@ def show():
             scope="usa",  # Focus the map on the USA
             labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 'REGION_NAME': 'Region Name'},  # Label for color scale
             title='Median Income',  # Title of the map
-            hover_data=['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']  # Add this line to specify the tooltip content
+            hover_data=['REGION_NAME': True, 'MEDIAN_HOUSEHOLD_INCOME': True]  # Add this line to specify the tooltip content
         )
         # Adjust the layout of the figure for better display
         fig.update_layout(
@@ -73,6 +75,9 @@ def show():
         st.write("Data:")
         st.dataframe(df_national[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']])
 
+
+# STATE DISPLAY
+        
     elif map_level == "State":
         df_state = df[df['REGION_TYPE'] == 'STATE']
 
@@ -86,7 +91,7 @@ def show():
             scope="usa",  # Focus the map on the USA
             labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 'REGION_NAME': 'Region Name'},  # Label for color scale
             title='Median Income',  # Title of the map
-            hover_data=['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']  # Add this line to specify the tooltip content
+            hover_data=['POSTAL_CODE': False, 'REGION_NAME': True, 'MEDIAN_HOUSEHOLD_INCOME': True]  # Add this line to specify the tooltip content
         )
         # Adjust the layout of the figure for better display
         fig.update_layout(
@@ -124,6 +129,8 @@ def show():
         st.write("Data:")
         st.dataframe(df_state[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']])
 
+# COUNTY DISPLAY
+
     elif map_level == "County":
         df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
@@ -137,7 +144,7 @@ def show():
             scope='usa',
             labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 'REGION_NAME': 'Region Name'},  # Label for color scale
             title='Median Income',  # Title of the map
-            hover_data=['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']  # Add this line to specify the tooltip content
+            hover_data=['FIPS_CODE': False, 'REGION_NAME': True, 'MEDIAN_HOUSEHOLD_INCOME': True]  # Add this line to specify the tooltip content
         )
 
         fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
