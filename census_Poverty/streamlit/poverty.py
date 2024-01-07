@@ -19,7 +19,7 @@ def show():
     df = load_data()
 
     # Create three columns for the selectors
-    numberpercent, geo, agelevel = st.beta_columns(3)
+    numberpercent, geo, agelevel = st.columns(3)
 
     # Use each column to place a selector
     with numberpercent:
