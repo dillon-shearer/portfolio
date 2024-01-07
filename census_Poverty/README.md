@@ -44,6 +44,28 @@ The project generates several visualizations, including:
 2. Choropleth maps showing poverty percentages and median incomes by state.
 3. Scatter plots comparing poverty rates and median household incomes.
 
+## Interactive Web Application
+
+In addition to the Python scripts and Jupyter notebooks, this project features an interactive web application developed using Streamlit. This app allows users to explore the data through interactive visualizations and charts, providing a more dynamic and accessible way to understand the SAIPE poverty data.
+
+### [Explore the Poverty Data Analysis App](https://ds-saipe-analysis.streamlit.app/)
+
+The Streamlit app includes the following features:
+- Interactive maps and charts displaying poverty rates and median household incomes at national, state, and county levels.
+- Filters to view specific data subsets based on regions.
+- Responsive design for an optimal viewing experience across different devices.
+
+#### How to Access
+- The app is hosted online and can be accessed through the provided link: [SAIPE Poverty Data Analysis App](https://ds-saipe-analysis.streamlit.app/).
+- No installation or setup is required; the app runs directly in the web browser.
+
+#### Technologies Used
+- Streamlit for web application development.
+- Plotly and Matplotlib for interactive visualizations within the app.
+
+#### Feedback and Contributions
+- For feedback, suggestions, or contributions to the app, please reach out through the contact details provided or via GitHub issues and pull requests.
+
 ## Contact
 
 For any queries or feedback, please reach out to Dillon Shearer (dillshearer@outlook.com).
