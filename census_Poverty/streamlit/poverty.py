@@ -75,11 +75,10 @@ def show():
         color_continuous_scale='Greens',  # Color scale
         scope='usa',  # Focus the map on the USA
         labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},  # Label for color scale
-        title='Median Income (State)'  # Title of the map
+        title='Median Income (County)'  # Title of the map
     )
 
     fig.update_geos(fitbounds="locations")
-    fig.show()
     
     # Adjust the layout of the figure for better display
     fig.update_layout(
