@@ -49,13 +49,13 @@ def show():
 
         # Scatter plot with Error Bars
         fig = px.scatter(
-            df_national, 
+            df_state, 
             x='REGION_NAME', 
             y='ALL_AGES_POVERTY_PERCENT',
             error_y='ALL_AGES_90_CI_UPPER_PERCENT',
             error_y_minus='ALL_AGES_90_CI_LOWER_PERCENT',
-            labels={'REGION_NAME': 'Region Name', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
-            title='Median Household Income by Region with Confidence Intervals'
+            labels={'REGION_NAME': 'Region Name', 'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent'},
+            title='Poverty by Region with Confidence Intervals'
         )
 
         fig.update_traces(
@@ -103,13 +103,13 @@ def show():
 
         # Scatter plot with Error Bars
         fig = px.scatter(
-            df_national, 
+            df_state, 
             x='REGION_NAME', 
             y='ALL_AGES_POVERTY_PERCENT',
             error_y='ALL_AGES_90_CI_UPPER_PERCENT',
             error_y_minus='ALL_AGES_90_CI_LOWER_PERCENT',
-            labels={'REGION_NAME': 'Region Name', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
-            title='Median Household Income by Region with Confidence Intervals'
+            labels={'REGION_NAME': 'Region Name', 'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent'},
+            title='Poverty by Region with Confidence Intervals'
         )
 
         fig.update_traces(
@@ -142,9 +142,9 @@ def show():
             color='MEDIAN_HOUSEHOLD_INCOME',
             color_continuous_scale='Greens',
             scope='usa',
-            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 'REGION_NAME': 'Region Name'},  # Label for color scale
+            labels={'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent', 'REGION_NAME': 'Region Name'},  # Label for color scale
             title='Median Income',  # Title of the map
-            hover_data={'FIPS_CODE': False, 'REGION_NAME': True, 'MEDIAN_HOUSEHOLD_INCOME': True}  # Add this line to specify the tooltip content
+            hover_data={'FIPS_CODE': False, 'REGION_NAME': True, 'ALL_AGES_POVERTY_PERCENT': True}  # Add this line to specify the tooltip content
         )
 
         fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
@@ -159,8 +159,8 @@ def show():
             y='ALL_AGES_POVERTY_PERCENT',
             error_y='ALL_AGES_90_CI_UPPER_PERCENT',
             error_y_minus='ALL_AGES_90_CI_LOWER_PERCENT',
-            labels={'REGION_NAME': 'Region Name', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
-            title='Median Household Income by Region with Confidence Intervals'
+            labels={'REGION_NAME': 'Region Name', 'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent'},
+            title='Poverty by Region with Confidence Intervals'
         )
 
         fig.update_traces(
