@@ -52,7 +52,7 @@ def show():
             y='MEDIAN_HOUSEHOLD_INCOME',
             error_y='MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND',
             error_y_minus='MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND',
-            labels={'REGION_NAME': 'Region', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
+            labels={'REGION_NAME': 'Region Name', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
             title='Median Household Income by Region with Confidence Intervals'
         )
 
@@ -84,8 +84,9 @@ def show():
             color='MEDIAN_HOUSEHOLD_INCOME',  # Column for coloring
             color_continuous_scale='Greens',  # Color scale
             scope="usa",  # Focus the map on the USA
-            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},  # Label for color scale
-            title='Median Income'  # Title of the map
+            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 'REGION_NAME': 'Region Name'},  # Label for color scale
+            title='Median Income',  # Title of the map
+            hover_data=['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']  # Add this line to specify the tooltip content
         )
         # Adjust the layout of the figure for better display
         fig.update_layout(
@@ -102,7 +103,7 @@ def show():
             y='MEDIAN_HOUSEHOLD_INCOME',
             error_y='MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND',
             error_y_minus='MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND',
-            labels={'REGION_NAME': 'Region', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
+            labels={'REGION_NAME': 'Region Name', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
             title='Median Household Income by Region with Confidence Intervals'
         )
 
@@ -134,8 +135,9 @@ def show():
             color='MEDIAN_HOUSEHOLD_INCOME',
             color_continuous_scale='Greens',
             scope='usa',
-            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
-            title='Median Income'
+            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 'REGION_NAME': 'Region Name'},  # Label for color scale
+            title='Median Income',  # Title of the map
+            hover_data=['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']  # Add this line to specify the tooltip content
         )
 
         fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
@@ -150,7 +152,7 @@ def show():
             y='MEDIAN_HOUSEHOLD_INCOME',
             error_y='MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND',
             error_y_minus='MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND',
-            labels={'REGION_NAME': 'Region', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
+            labels={'REGION_NAME': 'Region Name', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
             title='Median Household Income by Region with Confidence Intervals'
         )
 
