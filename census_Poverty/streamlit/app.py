@@ -23,7 +23,6 @@ import streamlit as st
 st.markdown("""
     <style>
     .sidebar .sidebar-content {
-        background-color: #f1f3f6;  /* Light grey background */
         color: #333;               /* Darker text for better readability */
         font-family: 'Arial';      /* Modern font */
     }
@@ -39,7 +38,6 @@ st.markdown("""
         margin-bottom: 15px;     /* Spacing between options */
     }
     .stRadio > div {
-        background-color: #e8eaf6; /* Light background for radio buttons */
         border-radius: 10px;       /* Rounded corners for radio buttons area */
         padding: 10px;             /* Padding inside the radio buttons area */
     }
