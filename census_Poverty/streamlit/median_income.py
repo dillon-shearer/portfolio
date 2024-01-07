@@ -55,8 +55,8 @@ def show():
             df_national, 
             x='REGION_NAME', 
             y='MEDIAN_HOUSEHOLD_INCOME',
-            error_y='MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND',
-            error_y_minus='MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND',
+            error_y='error_upper',
+            error_y_minus='error_lower',
             labels={'REGION_NAME': 'Region Name', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
             title='Median Household Income by Region with Confidence Intervals'
         )
@@ -112,8 +112,8 @@ def show():
             df_state, 
             x='REGION_NAME', 
             y='MEDIAN_HOUSEHOLD_INCOME',
-            error_y='MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND',
-            error_y_minus='MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND',
+            error_y='error_upper',
+            error_y_minus='error_lower',
             labels={'REGION_NAME': 'Region Name', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
             title='Median Household Income by Region with Confidence Intervals'
         )
@@ -166,8 +166,8 @@ def show():
             df_county, 
             x='REGION_NAME', 
             y='MEDIAN_HOUSEHOLD_INCOME',
-            error_y='MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND',
-            error_y_minus='MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND',
+            error_y='error_upper',
+            error_y_minus='error_lower',
             labels={'REGION_NAME': 'Region Name', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
             title='Median Household Income by Region with Confidence Intervals'
         )
