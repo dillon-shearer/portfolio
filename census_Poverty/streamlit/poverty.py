@@ -1,6 +1,5 @@
 import streamlit as st
 import plotly.express as px
-import plotly.graph_objects as go
 import pandas as pd
 
 # Function to load data
@@ -68,15 +67,19 @@ def show():
     df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
     # Create the choropleth map
-    fig = go.Figure(go.Choropleth(
-        geojson='https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json',
-        locations=df['FIPS_CODE'],  # FIPS codes
-        z=df['MEDIAN_HOUSEHOLD_INCOME'],  # Data values
-        colorscale='Viridis',  # Color scale
-        marker_line_color='white',  # Boundary line color
-    ))
+    fig = px.choropleth(
+        df,
+        geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
+        locations='FIPS_CODE',  # DataFrame column with FIPS codes
+        color='MEDIAN_HOUSEHOLD_INCOME',  # DataFrame column with the data to visualize
+        color_continuous_scale='Greens',  # Color scale
+        scope='usa',  # Focus the map on the USA
+        labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},  # Label for color scale
+        title='Median Income (State)'  # Title of the map
+    )
 
-    fig.update_geos(fitbounds="locations", visible=False)
+    fig.update_geos(fitbounds="locations")
+    fig.show()
     
     # Adjust the layout of the figure for better display
     fig.update_layout(
