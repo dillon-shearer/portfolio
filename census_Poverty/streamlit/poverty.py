@@ -270,7 +270,7 @@ def show():
                 x='REGION_NAME', 
                 y='0_4_POVERTY_PERCENT',
                 error_y='0_4_CI_UPPER_PERCENT',
-                error_y_minus='0_4_CI_UPPER_PERCENT',
+                error_y_minus='0_4_CI_LOWER_PERCENT',
                 labels={'REGION_NAME': 'Region Name', '0_4_POVERTY_PERCENT': 'Age 0-4 Poverty Percent'},
                 title='Poverty by Region with Confidence Intervals'
             )
