@@ -90,4 +90,4 @@ def show():
         # Display in Streamlit
         st.plotly_chart(fig, use_container_width=True)
         st.write("Data:")
-        st.dataframe(df_county[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']])
+        st.dataframe(df_county[['REGION_NAME', 'POSTAL_CODE', 'MEDIAN_HOUSEHOLD_INCOME']])
