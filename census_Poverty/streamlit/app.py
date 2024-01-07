@@ -9,7 +9,7 @@ import analysis
 
 # Navigation
 st.sidebar.title("Navigation")
-choice = st.sidebar.radio("Go to", ["Home", "Analysis"])
+choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Acquisition", "Cleaning" "Analysis"])
 
 # Set page configuration
 st.set_page_config(
@@ -29,9 +29,9 @@ if __name__ == "__main__":
     # Page routing
     if choice == "Home":
         home.show()
-    elif choice == "Poverty":
+    elif choice == "Poverty Map":
         poverty.show()
-    elif choice == "Median Income":
+    elif choice == "Median Income Map":
         median_income.show()
     elif choice == "Acquisition":
         acquisition.show()
