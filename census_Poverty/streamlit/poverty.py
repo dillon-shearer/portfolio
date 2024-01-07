@@ -70,9 +70,9 @@ def show():
     # Create the choropleth map
     fig = go.Figure(go.Choropleth(
         geojson='https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json',
-        locations=df['fips'],  # FIPS codes
-        z=df['values'],  # Data values
-        colorscale='Viridis',  # Color scale
+        locations=df['FIPS_CODE'],  # FIPS codes
+        z=df['MEDIAN_HOUSEHOLD_INCOME'],  # Data values
+        color_continuous_scale='Greens',  # Color scale
         marker_line_color='white',  # Boundary line color
     ))
 
