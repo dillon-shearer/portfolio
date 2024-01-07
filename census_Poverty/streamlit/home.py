@@ -1,4 +1,5 @@
 import streamlit as st
+import plotly.express as px
 
 # Main function for the analysis pages
 def show():
