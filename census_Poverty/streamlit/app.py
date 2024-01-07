@@ -49,7 +49,7 @@ choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", 
 
 # Footer or additional information
 st.sidebar.markdown("---")
-st.sidebar.info("Streamlit App v1.0")
+st.sidebar.info("Dillon Shearer - 2024")
 
 if __name__ == "__main__":
     # Page routing
