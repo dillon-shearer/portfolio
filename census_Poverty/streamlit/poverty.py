@@ -19,7 +19,7 @@ def show():
     df = load_data()
 
     # User selects map level
-    map_level = st.selectbox("Select Map Level", ["National", "State", "County"])
+    map_level = st.selectbox("Select Map Geo Level", ["National", "State", "County"])
 
 # NATIONAL DISPLAY
 
