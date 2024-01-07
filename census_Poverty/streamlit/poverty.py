@@ -297,48 +297,4 @@ def show():
         elif map_level == "County":
             df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
-            # Create the choropleth map for counties
-            fig = px.choropleth(
-                df_county,
-                geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
-                locations='FIPS_CODE',
-                color='0_4_POVERTY_PERCENT',
-                color_continuous_scale='Reds',
-                scope='usa',
-                labels={'0_4_POVERTY_PERCENT': 'Age 0-4 Poverty Percent', 'REGION_NAME': 'Region Name'},  # Label for color scale
-                title='Poverty',  # Title of the map
-                hover_data={'FIPS_CODE': False, 'REGION_NAME': True, '0_4_POVERTY_PERCENT': True}  # Add this line to specify the tooltip content
-            )
-
-            fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
-            
-            # Display in Streamlit
-            st.plotly_chart(fig, use_container_width=True)
-
-            # Scatter plot with Error Bars
-            fig = px.scatter(
-                df_county, 
-                x='REGION_NAME', 
-                y='0_4_POVERTY_PERCENT',
-                error_y='0_4_CI_UPPER_PERCENT',
-                error_y_minus='0_4_CI_LOWER_PERCENT',
-                labels={'REGION_NAME': 'Region Name', '0_4_POVERTY_PERCENT': 'Age 0-4 Poverty Percent'},
-                title='Poverty by Region with Confidence Intervals'
-            )
-
-            fig.update_traces(
-                error_y=dict(type='data', symmetric=False, color='red'),
-                marker=dict(color='red')
-            )
-            
-            # Adjust the layout of the figure for better display
-            fig.update_layout(
-            margin=dict(l=0, r=0, t=50, b=0)  # Reducing the margin for full-width display
-            )
-
-            # Show the figure
-            st.plotly_chart(fig, use_container_width=True)
-
-            # Show underlying data
-            st.write("Data:")
-            st.dataframe(df_county[['REGION_NAME', '0_4_CI_UPPER_PERCENT', '0_4_CI_UPPER_PERCENT', '0_4_CI_LOWER_PERCENT']])
+            st.write("County data not available for ages 0-4.")
