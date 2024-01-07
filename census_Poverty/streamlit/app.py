@@ -32,7 +32,6 @@ st.markdown("""
     }
     .stRadio > label {
         display: block;
-        color: #4a4a4a;          /* Dark grey for radio options */
         font-weight: bold;       /* Bold font for options */
         font-size: 16px;         /* Larger font size */
         margin-bottom: 15px;     /* Spacing between options */
