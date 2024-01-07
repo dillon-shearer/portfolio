@@ -38,6 +38,9 @@ def show():
             if map_level == "National":
                 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
+                df_national['error_upper'] = df_national['ALL_AGES_90_CI_UPPER_PERCENT'] - df_national['ALL_AGES_POVERTY_PERCENT']
+                df_national['error_lower'] = df_national['ALL_AGES_POVERTY_PERCENT'] - df_national['ALL_AGES_90_CI_LOWER_PERCENT']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_national,
@@ -63,8 +66,8 @@ def show():
                     df_national, 
                     x='REGION_NAME', 
                     y='ALL_AGES_POVERTY_PERCENT',
-                    error_y='ALL_AGES_90_CI_UPPER_PERCENT',
-                    error_y_minus='ALL_AGES_90_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', 'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -92,6 +95,9 @@ def show():
             elif map_level == "State":
                 df_state = df[df['REGION_TYPE'] == 'STATE']
 
+                df_state['error_upper'] = df_state['ALL_AGES_90_CI_UPPER_PERCENT'] - df_state['ALL_AGES_POVERTY_PERCENT']
+                df_state['error_lower'] = df_state['ALL_AGES_POVERTY_PERCENT'] - df_state['ALL_AGES_90_CI_LOWER_PERCENT']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_state,
@@ -117,8 +123,8 @@ def show():
                     df_state, 
                     x='REGION_NAME', 
                     y='ALL_AGES_POVERTY_PERCENT',
-                    error_y='ALL_AGES_90_CI_UPPER_PERCENT',
-                    error_y_minus='ALL_AGES_90_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', 'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -145,6 +151,9 @@ def show():
             elif map_level == "County":
                 df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
+                df_county['error_upper'] = df_county['ALL_AGES_90_CI_UPPER_PERCENT'] - df_county['ALL_AGES_POVERTY_PERCENT']
+                df_county['error_lower'] = df_county['ALL_AGES_POVERTY_PERCENT'] - df_county['ALL_AGES_90_CI_LOWER_PERCENT']
+
                 # Create the choropleth map for counties
                 fig = px.choropleth(
                     df_county,
@@ -168,8 +177,8 @@ def show():
                     df_county, 
                     x='REGION_NAME', 
                     y='ALL_AGES_POVERTY_PERCENT',
-                    error_y='ALL_AGES_90_CI_UPPER_PERCENT',
-                    error_y_minus='ALL_AGES_90_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', 'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -198,6 +207,9 @@ def show():
             if map_level == "National":
                 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
+                df_national['error_upper'] = df_national['0_4_UPPER_PERCENT'] - df_national['0_4_POVERTY_PERCENT']
+                df_national['error_lower'] = df_national['0_4_POVERTY_PERCENT'] - df_national['0_4_CI_UPPER_PERCENT']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_national,
@@ -223,8 +235,8 @@ def show():
                     df_national, 
                     x='REGION_NAME', 
                     y='0_4_POVERTY_PERCENT',
-                    error_y='0_4_UPPER_PERCENT',
-                    error_y_minus='0_4_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_4_POVERTY_PERCENT': 'All Ages Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -252,6 +264,9 @@ def show():
             elif map_level == "State":
                 df_state = df[df['REGION_TYPE'] == 'STATE']
 
+                df_state['error_upper'] = df_state['0_4_UPPER_PERCENT'] - df_state['0_4_POVERTY_PERCENT']
+                df_state['error_lower'] = df_state['0_4_POVERTY_PERCENT'] - df_state['0_4_CI_UPPER_PERCENT']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_state,
@@ -277,8 +292,8 @@ def show():
                     df_state, 
                     x='REGION_NAME', 
                     y='0_4_POVERTY_PERCENT',
-                    error_y='0_4_UPPER_PERCENT',
-                    error_y_minus='0_4_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_4_POVERTY_PERCENT': 'Age 0-4 Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -314,6 +329,9 @@ def show():
             if map_level == "National":
                 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
+                df_national['error_upper'] = df_national['5_17_90_CI_UPPER_PERCENT'] - df_national['5_17_POVERTY_PERCENT']
+                df_national['error_lower'] = df_national['5_17_POVERTY_PERCENT'] - df_national['5_17_90_CI_LOWER_PERCENT']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_national,
@@ -339,8 +357,8 @@ def show():
                     df_national, 
                     x='REGION_NAME', 
                     y='5_17_POVERTY_PERCENT',
-                    error_y='5_17_90_CI_UPPER_PERCENT',
-                    error_y_minus='5_17_90_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '5_17_POVERTY_PERCENT': 'Ages 5-17 Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -368,6 +386,9 @@ def show():
             elif map_level == "State":
                 df_state = df[df['REGION_TYPE'] == 'STATE']
 
+                df_state['error_upper'] = df_state['5_17_90_CI_UPPER_PERCENT'] - df_state['5_17_POVERTY_PERCENT']
+                df_state['error_lower'] = df_state['5_17_POVERTY_PERCENT'] - df_state['5_17_90_CI_LOWER_PERCENT']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_state,
@@ -393,8 +414,8 @@ def show():
                     df_state, 
                     x='REGION_NAME', 
                     y='5_17_POVERTY_PERCENT',
-                    error_y='5_17_90_CI_UPPER_PERCENT',
-                    error_y_minus='5_17_90_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '5_17_POVERTY_PERCENT': 'Age 5-17 Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -421,6 +442,9 @@ def show():
             elif map_level == "County":
                 df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
+                df_county['error_upper'] = df_county['5_17_90_CI_UPPER_PERCENT'] - df_county['5_17_POVERTY_PERCENT']
+                df_county['error_lower'] = df_county['5_17_POVERTY_PERCENT'] - df_county['5_17_90_CI_LOWER_PERCENT']
+
                 # Create the choropleth map for counties
                 fig = px.choropleth(
                     df_county,
@@ -444,8 +468,8 @@ def show():
                     df_county, 
                     x='REGION_NAME', 
                     y='5_17_POVERTY_PERCENT',
-                    error_y='5_17_90_CI_UPPER_PERCENT',
-                    error_y_minus='5_17_90_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '5_17_POVERTY_PERCENT': 'Age 5-17 Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -474,6 +498,9 @@ def show():
             if map_level == "National":
                 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
+                df_national['error_upper'] = df_national['0_17_90_CI_UPPER_PERCENT'] - df_national['0_17_POVERTY_PERCENT']
+                df_national['error_lower'] = df_national['0_17_POVERTY_PERCENT'] - df_national['0_17_90_CI_LOWER_PERCENT']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_national,
@@ -499,8 +526,8 @@ def show():
                     df_national, 
                     x='REGION_NAME', 
                     y='0_17_POVERTY_PERCENT',
-                    error_y='0_17_90_CI_UPPER_PERCENT',
-                    error_y_minus='0_17_90_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_17_POVERTY_PERCENT': 'Ages 0-17 Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -528,6 +555,9 @@ def show():
             elif map_level == "State":
                 df_state = df[df['REGION_TYPE'] == 'STATE']
 
+                df_state['error_upper'] = df_state['0_17_90_CI_UPPER_PERCENT'] - df_state['0_17_POVERTY_PERCENT']
+                df_state['error_lower'] = df_state['0_17_POVERTY_PERCENT'] - df_state['0_17_90_CI_LOWER_PERCENT']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_state,
@@ -553,8 +583,8 @@ def show():
                     df_state, 
                     x='REGION_NAME', 
                     y='0_17_POVERTY_PERCENT',
-                    error_y='0_17_90_CI_UPPER_PERCENT',
-                    error_y_minus='0_17_90_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_17_POVERTY_PERCENT': 'Age 0-17 Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -581,6 +611,9 @@ def show():
             elif map_level == "County":
                 df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
+                df_county['error_upper'] = df_county['0_17_90_CI_UPPER_PERCENT'] - df_county['0_17_POVERTY_PERCENT']
+                df_county['error_lower'] = df_county['0_17_POVERTY_PERCENT'] - df_county['0_17_90_CI_LOWER_PERCENT']
+
                 # Create the choropleth map for counties
                 fig = px.choropleth(
                     df_county,
@@ -604,8 +637,8 @@ def show():
                     df_county, 
                     x='REGION_NAME', 
                     y='0_17_POVERTY_PERCENT',
-                    error_y='0_17_90_CI_UPPER_PERCENT',
-                    error_y_minus='0_17_90_CI_LOWER_PERCENT',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_17_POVERTY_PERCENT': 'Age 0-17 Poverty Percent'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -636,6 +669,9 @@ def show():
             if map_level == "National":
                 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
+                df_national['error_upper'] = df_national['ALL_AGES_90_CI_UPPER_BOUND'] - df_national['ALL_AGES_POVERTY_ESTIMATE']
+                df_national['error_lower'] = df_national['ALL_AGES_POVERTY_ESTIMATE'] - df_national['ALL_AGES_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_national,
@@ -661,8 +697,8 @@ def show():
                     df_national, 
                     x='REGION_NAME', 
                     y='ALL_AGES_POVERTY_ESTIMATE',
-                    error_y='ALL_AGES_90_CI_UPPER_BOUND',
-                    error_y_minus='ALL_AGES_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', 'ALL_AGES_POVERTY_ESTIMATE': 'All Ages Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -690,6 +726,9 @@ def show():
             elif map_level == "State":
                 df_state = df[df['REGION_TYPE'] == 'STATE']
 
+                df_state['error_upper'] = df_state['ALL_AGES_90_CI_UPPER_BOUND'] - df_state['ALL_AGES_POVERTY_ESTIMATE']
+                df_state['error_lower'] = df_state['ALL_AGES_POVERTY_ESTIMATE'] - df_state['ALL_AGES_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_state,
@@ -715,8 +754,8 @@ def show():
                     df_state, 
                     x='REGION_NAME', 
                     y='ALL_AGES_POVERTY_ESTIMATE',
-                    error_y='ALL_AGES_90_CI_UPPER_BOUND',
-                    error_y_minus='ALL_AGES_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', 'ALL_AGES_POVERTY_ESTIMATE': 'All Ages Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -743,6 +782,9 @@ def show():
             elif map_level == "County":
                 df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
+                df_county['error_upper'] = df_county['ALL_AGES_90_CI_UPPER_BOUND'] - df_county['ALL_AGES_POVERTY_ESTIMATE']
+                df_county['error_lower'] = df_county['ALL_AGES_POVERTY_ESTIMATE'] - df_county['ALL_AGES_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map for counties
                 fig = px.choropleth(
                     df_county,
@@ -766,8 +808,8 @@ def show():
                     df_county, 
                     x='REGION_NAME', 
                     y='ALL_AGES_POVERTY_ESTIMATE',
-                    error_y='ALL_AGES_90_CI_UPPER_BOUND',
-                    error_y_minus='ALL_AGES_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', 'ALL_AGES_POVERTY_ESTIMATE': 'All Ages Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -796,6 +838,9 @@ def show():
             if map_level == "National":
                 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
+                df_national['error_upper'] = df_national['0_4_90_CI_UPPER_BOUND'] - df_national['0_4_POVERTY_ESTIMATE']
+                df_national['error_lower'] = df_national['0_4_POVERTY_ESTIMATE'] - df_national['0_4_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_national,
@@ -821,8 +866,8 @@ def show():
                     df_national, 
                     x='REGION_NAME', 
                     y='0_4_POVERTY_ESTIMATE',
-                    error_y='0_4_90_CI_UPPER_BOUND',
-                    error_y_minus='0_4_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_4_POVERTY_ESTIMATE': 'All Ages Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -850,6 +895,9 @@ def show():
             elif map_level == "State":
                 df_state = df[df['REGION_TYPE'] == 'STATE']
 
+                df_state['error_upper'] = df_state['0_4_90_CI_UPPER_BOUND'] - df_state['0_4_POVERTY_ESTIMATE']
+                df_state['error_lower'] = df_state['0_4_POVERTY_ESTIMATE'] - df_state['0_4_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_state,
@@ -875,8 +923,8 @@ def show():
                     df_state, 
                     x='REGION_NAME', 
                     y='0_4_POVERTY_ESTIMATE',
-                    error_y='0_4_90_CI_UPPER_BOUND',
-                    error_y_minus='0_4_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_4_POVERTY_ESTIMATE': 'Age 0-4 Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -912,6 +960,9 @@ def show():
             if map_level == "National":
                 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
+                df_national['error_upper'] = df_national['5_17_90_CI_UPPER_BOUND'] - df_national['5_17_POVERTY_ESTIMATE']
+                df_national['error_lower'] = df_national['5_17_POVERTY_ESTIMATE'] - df_national['5_17_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_national,
@@ -937,8 +988,8 @@ def show():
                     df_national, 
                     x='REGION_NAME', 
                     y='5_17_POVERTY_ESTIMATE',
-                    error_y='5_17_90_CI_UPPER_BOUND',
-                    error_y_minus='5_17_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '5_17_POVERTY_ESTIMATE': 'Ages 5-17 Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -966,6 +1017,9 @@ def show():
             elif map_level == "State":
                 df_state = df[df['REGION_TYPE'] == 'STATE']
 
+                df_state['error_upper'] = df_state['5_17_90_CI_UPPER_BOUND'] - df_state['5_17_POVERTY_ESTIMATE']
+                df_state['error_lower'] = df_state['5_17_POVERTY_ESTIMATE'] - df_state['5_17_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_state,
@@ -991,8 +1045,8 @@ def show():
                     df_state, 
                     x='REGION_NAME', 
                     y='5_17_POVERTY_ESTIMATE',
-                    error_y='5_17_90_CI_UPPER_BOUND',
-                    error_y_minus='5_17_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '5_17_POVERTY_ESTIMATE': 'Age 5-17 Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -1019,6 +1073,9 @@ def show():
             elif map_level == "County":
                 df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
+                df_county['error_upper'] = df_county['5_17_90_CI_UPPER_BOUND'] - df_county['5_17_POVERTY_ESTIMATE']
+                df_county['error_lower'] = df_county['5_17_POVERTY_ESTIMATE'] - df_county['5_17_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map for counties
                 fig = px.choropleth(
                     df_county,
@@ -1042,8 +1099,8 @@ def show():
                     df_county, 
                     x='REGION_NAME', 
                     y='5_17_POVERTY_ESTIMATE',
-                    error_y='5_17_90_CI_UPPER_BOUND',
-                    error_y_minus='5_17_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '5_17_POVERTY_ESTIMATE': 'Age 5-17 Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -1072,6 +1129,9 @@ def show():
             if map_level == "National":
                 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
+                df_national['error_upper'] = df_national['0_17_90_CI_UPPER_BOUND'] - df_national['0_17_POVERTY_ESTIMATE']
+                df_national['error_lower'] = df_national['0_17_POVERTY_ESTIMATE'] - df_national['0_17_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_national,
@@ -1097,8 +1157,8 @@ def show():
                     df_national, 
                     x='REGION_NAME', 
                     y='0_17_POVERTY_ESTIMATE',
-                    error_y='0_17_90_CI_UPPER_BOUND',
-                    error_y_minus='0_17_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_17_POVERTY_ESTIMATE': 'Ages 0-17 Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -1126,6 +1186,9 @@ def show():
             elif map_level == "State":
                 df_state = df[df['REGION_TYPE'] == 'STATE']
 
+                df_state['error_upper'] = df_state['0_17_90_CI_UPPER_BOUND'] - df_state['0_17_POVERTY_ESTIMATE']
+                df_state['error_lower'] = df_state['0_17_POVERTY_ESTIMATE'] - df_state['0_17_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map
                 fig = px.choropleth(
                     df_state,
@@ -1151,8 +1214,8 @@ def show():
                     df_state, 
                     x='REGION_NAME', 
                     y='0_17_POVERTY_ESTIMATE',
-                    error_y='0_17_90_CI_UPPER_BOUND',
-                    error_y_minus='0_17_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_17_POVERTY_ESTIMATE': 'Age 0-17 Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
@@ -1179,6 +1242,9 @@ def show():
             elif map_level == "County":
                 df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
+                df_county['error_upper'] = df_county['0_17_90_CI_UPPER_BOUND'] - df_county['0_17_POVERTY_ESTIMATE']
+                df_county['error_lower'] = df_county['0_17_POVERTY_ESTIMATE'] - df_county['0_17_90_CI_LOWER_BOUND']
+
                 # Create the choropleth map for counties
                 fig = px.choropleth(
                     df_county,
@@ -1202,8 +1268,8 @@ def show():
                     df_county, 
                     x='REGION_NAME', 
                     y='0_17_POVERTY_ESTIMATE',
-                    error_y='0_17_90_CI_UPPER_BOUND',
-                    error_y_minus='0_17_90_CI_LOWER_BOUND',
+                    error_y='error_upper',
+                    error_y_minus='error_lower',
                     labels={'REGION_NAME': 'Region Name', '0_17_POVERTY_ESTIMATE': 'Age 0-17 Poverty Value'},
                     title='Poverty by Region with Confidence Intervals'
                 )
