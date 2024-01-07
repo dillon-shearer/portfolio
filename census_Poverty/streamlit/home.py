@@ -16,5 +16,5 @@ st.set_page_config(
 # Main function for the analysis pages
 def show():
     # Set up the page
-    st.title("Census Poverty Data Home")
-    st.show("Dillon Shearer")
+    st.title("SAIPE Poverty/Income: Data Home")
+    st.write("Dillon Shearer")

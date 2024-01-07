@@ -15,7 +15,7 @@ def load_data():
 # Main function for the analysis pages
 def show():
     # Set up the page
-    st.title("Census Poverty/Median Income Data Exploration")
+    st.title("SAIPE Poverty/Income: Data Analysis")
     st.write("*This app explores the 2022 SAIPE dataset for poverty analysis.*")
     st.write("Dillon Shearer - 2024")
     st.write("-----")
