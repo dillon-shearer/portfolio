@@ -73,7 +73,7 @@ def show():
 
         # Show underlying data
         st.write("Data:")
-        st.dataframe(df_national[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']])
+        st.dataframe(df_national[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME', 'MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND', 'MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND']])
 
 
 # STATE DISPLAY
@@ -127,7 +127,7 @@ def show():
 
         # Show underlying data
         st.write("Data:")
-        st.dataframe(df_state[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']])
+        st.dataframe(df_state[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME', 'MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND', 'MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND']])
 
 # COUNTY DISPLAY
 
@@ -178,4 +178,4 @@ def show():
 
         # Show underlying data
         st.write("Data:")
-        st.dataframe(df_county[['REGION_NAME', 'POSTAL_CODE', 'MEDIAN_HOUSEHOLD_INCOME']])
+        st.dataframe(df_county[['REGION_NAME', 'POSTAL_CODE', 'MEDIAN_HOUSEHOLD_INCOME', 'MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND', 'MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND']])
