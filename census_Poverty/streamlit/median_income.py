@@ -44,7 +44,7 @@ def show():
         # Show the figure
         st.plotly_chart(fig, use_container_width=True)
         st.write("Data:")
-        st.dataframe(df_national['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME'])
+        st.dataframe(df_national[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']])
 
     elif map_level == "State":
         df_state = df[df['REGION_TYPE'] == 'STATE']
@@ -68,7 +68,7 @@ def show():
         # Show the figure
         st.plotly_chart(fig, use_container_width=True)
         st.write("Data:")
-        st.dataframe(df_state['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME'])
+        st.dataframe(df_state[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']])
 
     elif map_level == "County":
         df_county = df[df['REGION_TYPE'] == 'COUNTY']
@@ -90,4 +90,4 @@ def show():
         # Display in Streamlit
         st.plotly_chart(fig, use_container_width=True)
         st.write("Data:")
-        st.dataframe(df_county['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME'])
+        st.dataframe(df_county[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']])
