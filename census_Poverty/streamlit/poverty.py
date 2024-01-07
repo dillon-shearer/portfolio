@@ -208,7 +208,7 @@ def show():
                 df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
                 df_national['error_upper'] = df_national['0_4_UPPER_PERCENT'] - df_national['0_4_POVERTY_PERCENT']
-                df_national['error_lower'] = df_national['0_4_POVERTY_PERCENT'] - df_national['0_4_UPPER_PERCENT']
+                df_national['error_lower'] = df_national['0_4_POVERTY_PERCENT'] - df_national['0_4_CI_LOWER_PERCENT']
 
                 # Create the choropleth map
                 fig = px.choropleth(
@@ -265,7 +265,7 @@ def show():
                 df_state = df[df['REGION_TYPE'] == 'STATE']
 
                 df_state['error_upper'] = df_state['0_4_UPPER_PERCENT'] - df_state['0_4_POVERTY_PERCENT']
-                df_state['error_lower'] = df_state['0_4_POVERTY_PERCENT'] - df_state['0_4_UPPER_PERCENT']
+                df_state['error_lower'] = df_state['0_4_POVERTY_PERCENT'] - df_state['0_4_CI_LOWER_PERCENT']
 
                 # Create the choropleth map
                 fig = px.choropleth(
