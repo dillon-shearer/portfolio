@@ -13,7 +13,7 @@ def load_data():
     return df
 
 # Main function for the analysis pages
-def show():
+def show_analysis():
     # Set up the page
     st.title("Census Poverty Data Exploration")
     st.write("*This app explores the 2022 SAIPE dataset for poverty analysis.*")

@@ -14,7 +14,7 @@ st.set_page_config(
 )
 
 # Main function for the analysis pages
-def show():
+def show_home():
     # Set up the page
     st.title("Census Poverty Data Exploration")
     st.show("Dillon Shearer")
