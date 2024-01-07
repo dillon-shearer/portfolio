@@ -18,12 +18,16 @@ def show():
 
     df = load_data()
 
-    # User selects map level
-    map_level = st.selectbox("Select Map Geo Level", ["National", "State", "County"])
+    # Create three columns for the selectors
+    numberpercent, geo, agelevel = st.beta_columns(3)
 
-    age_level = st.selectbox("Select Age Group of Interest", ["All Ages", "0-4", "5-17", "0-17"])
-
-    percent_or_number = st.selectbox("Select between percentages or number values", ["Percentages", 'Numbers'])
+    # Use each column to place a selector
+    with numberpercent:
+        percent_or_number = st.selectbox("Select between percentages or number values", ["Percentages", 'Numbers'])
+    with geo:
+        map_level = st.selectbox("Select Map Geo Level", ["National", "State", "County"])
+    with agelevel:
+        age_level = st.selectbox("Select Age Group of Interest", ["All Ages", "0-4", "5-17", "0-17"])
 
 # Percentages
     if percent_or_number == 'Percentages':
