@@ -139,7 +139,7 @@ def show():
             df_county,
             geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
             locations='FIPS_CODE',
-            color='MEDIAN_HOUSEHOLD_INCOME',
+            color='ALL_AGES_POVERTY_PERCENT',
             color_continuous_scale='Greens',
             scope='usa',
             labels={'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent', 'REGION_NAME': 'Region Name'},  # Label for color scale
@@ -154,7 +154,7 @@ def show():
 
         # Scatter plot with Error Bars
         fig = px.scatter(
-            df_national, 
+            df_county, 
             x='REGION_NAME', 
             y='ALL_AGES_POVERTY_PERCENT',
             error_y='ALL_AGES_90_CI_UPPER_PERCENT',
