@@ -21,7 +21,7 @@ st.set_page_config(
 
 # Function to load data
 def load_data():
-    clean_data_filepath = 'data/CLEANED_2022_SAIPE_DATA.xlsx'
+    clean_data_filepath = 'census_Poverty/data/CLEANED_2022_SAIPE_DATA.xlsx'
     df = pd.read_excel(clean_data_filepath)
     return df
 
