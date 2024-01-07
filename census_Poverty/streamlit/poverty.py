@@ -78,8 +78,7 @@ def show():
         title='Median Income (County)'
     )
 
-    # fig.update_geos(fitbounds="locations")
-    # fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
+    fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
     
     # Display in Streamlit
     st.plotly_chart(fig, use_container_width=True)
