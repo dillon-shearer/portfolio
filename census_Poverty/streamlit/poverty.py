@@ -72,7 +72,7 @@ def show():
         geojson='https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json',
         locations=df['FIPS_CODE'],  # FIPS codes
         z=df['MEDIAN_HOUSEHOLD_INCOME'],  # Data values
-        color_continuous_scale='Greens',  # Color scale
+        colorscale='Viridis',  # Color scale
         marker_line_color='white',  # Boundary line color
     ))
 
