@@ -4,4 +4,6 @@ import streamlit as st
 def show():
     # Set up the page
     st.title("SAIPE Poverty/Income: Data Cleaning")
-    st.write("Dillon Shearer")
+    st.write("*This app explores the 2022 SAIPE dataset cleaning process.*")
+    st.write("Dillon Shearer - 2024")
+    st.write("-----")
