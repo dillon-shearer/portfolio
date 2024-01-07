@@ -8,7 +8,7 @@ import streamlit as st
 
 # Set page configuration
 st.set_page_config(
-    page_title="2022 SAIPE Poverty Data Exploration",
+    page_title="SAIPE Poverty Data Exploration",
     page_icon="📊",  # Example: using an emoji as icon
     layout="wide",
     initial_sidebar_state="expanded",
@@ -25,8 +25,8 @@ def load_data():
     df = pd.read_excel(clean_data_filepath)
     return df
 
-# Main function for the Streamlit app
-def main():
+# Main function for the analysis pages
+def show():
     # Set up the page
     st.title("Census Poverty Data Exploration")
     st.write("*This app explores the 2022 SAIPE dataset for poverty analysis.*")
@@ -236,8 +236,3 @@ def main():
         "8. **Regional Collaboration**: States that share similar economic profiles could benefit from regional collaboration to address common issues such as poverty, unemployment, and economic development." + "\n\n"
         "9. **Monitoring and Evaluation**: Implementing robust monitoring and evaluation systems to track the effectiveness of poverty reduction programs can help ensure that resources are being used effectively and that programs are adjusted based on outcomes." + "\n\n"
         "These insights can guide policy-makers, community leaders, and stakeholders in making informed decisions to foster economic growth and reduce poverty. Each insight should be considered within the context of broader economic trends and the specific needs of each state's population." + "\n\n")
-
-
-# Run the app
-if __name__ == "__main__":
-    main()
