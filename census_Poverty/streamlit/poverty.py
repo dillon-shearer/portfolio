@@ -215,7 +215,7 @@ def show():
                 df_national, 
                 x='REGION_NAME', 
                 y='0_4_POVERTY_PERCENT',
-                error_y='0_4_CI_UPPER_PERCENT',
+                error_y='0_4_UPPER_PERCENT',
                 error_y_minus='0_4_CI_LOWER_PERCENT',
                 labels={'REGION_NAME': 'Region Name', '0_4_POVERTY_PERCENT': 'All Ages Poverty Percent'},
                 title='Poverty by Region with Confidence Intervals'
@@ -236,7 +236,7 @@ def show():
 
             # Show underlying data
             st.write("Data:")
-            st.dataframe(df_national[['REGION_NAME', '0_4_POVERTY_PERCENT', '0_4_CI_UPPER_PERCENT', '0_4_CI_LOWER_PERCENT']])
+            st.dataframe(df_national[['REGION_NAME', '0_4_POVERTY_PERCENT', '0_4_UPPER_PERCENT', '0_4_CI_LOWER_PERCENT']])
 
 
         # STATE DISPLAY
@@ -269,7 +269,7 @@ def show():
                 df_state, 
                 x='REGION_NAME', 
                 y='0_4_POVERTY_PERCENT',
-                error_y='0_4_CI_UPPER_PERCENT',
+                error_y='0_4_UPPER_PERCENT',
                 error_y_minus='0_4_CI_LOWER_PERCENT',
                 labels={'REGION_NAME': 'Region Name', '0_4_POVERTY_PERCENT': 'Age 0-4 Poverty Percent'},
                 title='Poverty by Region with Confidence Intervals'
@@ -290,7 +290,7 @@ def show():
 
             # Show underlying data
             st.write("Data:")
-            st.dataframe(df_state[['REGION_NAME', '0_4_POVERTY_PERCENT', '0_4_CI_UPPER_PERCENT', '0_4_CI_LOWER_PERCENT']])
+            st.dataframe(df_state[['REGION_NAME', '0_4_POVERTY_PERCENT', '0_4_UPPER_PERCENT', '0_4_CI_LOWER_PERCENT']])
 
         # COUNTY DISPLAY
 
