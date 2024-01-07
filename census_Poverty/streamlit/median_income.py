@@ -55,7 +55,10 @@ def show():
             title='Median Household Income by Region with Confidence Intervals'
         )
 
-        fig.update_traces(error_y=dict(type='data', symmetric=False))
+        fig.update_traces(
+            error_y=dict(type='data', symmetric=False, color='green'),
+            marker=dict(color='green')
+        )
         
         # Adjust the layout of the figure for better display
         fig.update_layout(
@@ -102,7 +105,10 @@ def show():
             title='Median Household Income by Region with Confidence Intervals'
         )
 
-        fig.update_traces(error_y=dict(type='data', symmetric=False))
+        fig.update_traces(
+            error_y=dict(type='data', symmetric=False, color='green'),
+            marker=dict(color='green')
+        )
         
         # Adjust the layout of the figure for better display
         fig.update_layout(
@@ -147,7 +153,10 @@ def show():
             title='Median Household Income by Region with Confidence Intervals'
         )
 
-        fig.update_traces(error_y=dict(type='data', symmetric=False))
+        fig.update_traces(
+            error_y=dict(type='data', symmetric=False, color='green'),
+            marker=dict(color='green')
+        )
         
         # Adjust the layout of the figure for better display
         fig.update_layout(
