@@ -34,7 +34,7 @@ def show():
             color_continuous_scale='Greens',  # Color scale
             scope="usa",  # Focus the map on the USA
             labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},  # Label for color scale
-            title='Median Income (National)'  # Title of the map
+            title='Median Income'  # Title of the map
         )
         # Adjust the layout of the figure for better display
         fig.update_layout(
@@ -56,7 +56,7 @@ def show():
             color_continuous_scale='Greens',  # Color scale
             scope="usa",  # Focus the map on the USA
             labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},  # Label for color scale
-            title='Median Income (State)'  # Title of the map
+            title='Median Income'  # Title of the map
         )
         # Adjust the layout of the figure for better display
         fig.update_layout(
@@ -78,7 +78,7 @@ def show():
             color_continuous_scale='Greens',
             scope='usa',
             labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
-            title='Median Income (County)'
+            title='Median Income'
         )
 
         fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')

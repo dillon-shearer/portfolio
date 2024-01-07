@@ -30,11 +30,11 @@ def show():
             df_national,
             locations='REGION_NAME', 
             locationmode='country names',  # Location mode set to USA
-            color='MEDIAN_HOUSEHOLD_INCOME',  # Column for coloring
-            color_continuous_scale='Greens',  # Color scale
+            color='ALL_AGES_POVERTY_PERCENT',  # Column for coloring
+            color_continuous_scale='Reds',  # Color scale
             scope="usa",  # Focus the map on the USA
-            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},  # Label for color scale
-            title='Median Income (National)'  # Title of the map
+            labels={'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent'},  # Label for color scale
+            title='Poverty Percent'  # Title of the map
         )
         # Adjust the layout of the figure for better display
         fig.update_layout(
@@ -52,11 +52,11 @@ def show():
             df_state,
             locations='POSTAL_CODE', 
             locationmode='USA-states',  # Location mode set to USA
-            color='MEDIAN_HOUSEHOLD_INCOME',  # Column for coloring
-            color_continuous_scale='Greens',  # Color scale
+            color='ALL_AGES_POVERTY_PERCENT',  # Column for coloring
+            color_continuous_scale='Reds',  # Color scale
             scope="usa",  # Focus the map on the USA
-            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},  # Label for color scale
-            title='Median Income (State)'  # Title of the map
+            labels={'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent'},  # Label for color scale
+            title='Poverty Percent'  # Title of the map
         )
         # Adjust the layout of the figure for better display
         fig.update_layout(
@@ -74,11 +74,11 @@ def show():
             df_county,
             geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
             locations='FIPS_CODE',
-            color='MEDIAN_HOUSEHOLD_INCOME',
-            color_continuous_scale='Greens',
+            color='ALL_AGES_POVERTY_PERCENT',
+            color_continuous_scale='Reds',
             scope='usa',
-            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
-            title='Median Income (County)'
+            labels={'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent'},
+            title='Poverty Percent'
         )
 
         fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
