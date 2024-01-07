@@ -49,7 +49,7 @@ def show():
 
         # Scatter plot with Error Bars
         fig = px.scatter(
-            df_state, 
+            df_national, 
             x='REGION_NAME', 
             y='ALL_AGES_POVERTY_PERCENT',
             error_y='ALL_AGES_90_CI_UPPER_PERCENT',
