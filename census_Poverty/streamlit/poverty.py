@@ -146,7 +146,7 @@ def show():
                 color_continuous_scale='Reds',
                 scope='usa',
                 labels={'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent', 'REGION_NAME': 'Region Name'},  # Label for color scale
-                title='Median Income',  # Title of the map
+                title='Poverty',  # Title of the map
                 hover_data={'FIPS_CODE': False, 'REGION_NAME': True, 'ALL_AGES_POVERTY_PERCENT': True}  # Add this line to specify the tooltip content
             )
 
@@ -422,7 +422,7 @@ def show():
                 color_continuous_scale='Reds',
                 scope='usa',
                 labels={'5_17_POVERTY_PERCENT': 'Age 5-17 Poverty Percent', 'REGION_NAME': 'Region Name'},  # Label for color scale
-                title='Median Income',  # Title of the map
+                title='Poverty',  # Title of the map
                 hover_data={'FIPS_CODE': False, 'REGION_NAME': True, '5_17_POVERTY_PERCENT': True}  # Add this line to specify the tooltip content
             )
 
@@ -457,4 +457,4 @@ def show():
 
             # Show underlying data
             st.write("Data:")
-            st.dataframe(df_county[['REGION_NAME', '5_17_POVERTY_PERCENT', '5_17_90_CI_UPPER_PERCENT', '5_17_90_CI_UPPER_PERCENT']])
+            st.dataframe(df_county[['REGION_NAME', '5_17_POVERTY_PERCENT', '5_17_90_CI_UPPER_PERCENT', '5_17_90_CI_LOWER_PERCENT']])
