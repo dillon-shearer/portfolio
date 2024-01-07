@@ -2,8 +2,6 @@ import streamlit as st
 import home
 import poverty
 import median_income
-import acquisition
-import cleaning
 import analysis
 
 # Set page configuration
@@ -21,7 +19,7 @@ st.set_page_config(
 
 # Navigation
 st.sidebar.title("Navigation")
-choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Acquisition", "Cleaning", "Analysis"])
+choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Analysis"])
 
 if __name__ == "__main__":
     # Page routing
@@ -31,9 +29,5 @@ if __name__ == "__main__":
         poverty.show()
     elif choice == "Median Income Map":
         median_income.show()
-    elif choice == "Acquisition":
-        acquisition.show()
-    elif choice == "Cleaning":
-        cleaning.show()
     elif choice == "Analysis":
         analysis.show()
