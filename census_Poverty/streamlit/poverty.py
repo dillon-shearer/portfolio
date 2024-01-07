@@ -21,6 +21,8 @@ def show():
     # User selects map level
     map_level = st.selectbox("Select Map Geo Level", ["National", "State", "County"])
 
+    age_level = st.selectbox("Select Age Group of Interest", ["All Ages", "0-4", "4-17", "0-17"])
+
 # NATIONAL DISPLAY
 
     # Display map based on user selection
