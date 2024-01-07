@@ -9,7 +9,7 @@ import analysis
 
 # Navigation
 st.sidebar.title("Navigation")
-choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Acquisition", "Cleaning" "Analysis"])
+choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Acquisition", "Cleaning", "Analysis"])
 
 # Set page configuration
 st.set_page_config(
