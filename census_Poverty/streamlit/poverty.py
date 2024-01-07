@@ -21,9 +21,6 @@ def show():
     # User selects map level
     map_level = st.selectbox("Select Map Level", ["National", "State", "County"])
 
-    # Load data
-    df = load_data()
-
     # Display map based on user selection
     if map_level == "National":
         df_national = df[df['REGION_TYPE'] == 'NATIONAL']
@@ -70,7 +67,6 @@ def show():
         st.plotly_chart(fig, use_container_width=True)
 
     elif map_level == "County":
-
         df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
         # Create the choropleth map for counties
@@ -88,6 +84,3 @@ def show():
         fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
         
         # Display in Streamlit
-        st.plotly_chart(fig, use_container_width=True)
-
-        st.dataframe(df_county)
