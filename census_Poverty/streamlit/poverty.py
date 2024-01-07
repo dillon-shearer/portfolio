@@ -140,7 +140,7 @@ def show():
             geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
             locations='FIPS_CODE',
             color='ALL_AGES_POVERTY_PERCENT',
-            color_continuous_scale='Greens',
+            color_continuous_scale='Reds',
             scope='usa',
             labels={'ALL_AGES_POVERTY_PERCENT': 'All Ages Poverty Percent', 'REGION_NAME': 'Region Name'},  # Label for color scale
             title='Median Income',  # Title of the map
