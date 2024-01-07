@@ -6,11 +6,6 @@ import acquisition
 import cleaning
 import analysis
 
-
-# Navigation
-st.sidebar.title("Navigation")
-choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Acquisition", "Cleaning", "Analysis"])
-
 # Set page configuration
 st.set_page_config(
     page_title="SAIPE Data Analysis",
@@ -24,6 +19,9 @@ st.set_page_config(
     }
 )
 
+# Navigation
+st.sidebar.title("Navigation")
+choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Acquisition", "Cleaning", "Analysis"])
 
 if __name__ == "__main__":
     # Page routing
