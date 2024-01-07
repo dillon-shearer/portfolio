@@ -18,3 +18,4 @@ def show():
     st.write("Whether you're a policy maker, researcher, student, or just curious about socioeconomic trends, this app offers valuable data-driven perspectives.")
     st.write("-----")
     st.write("### **Get Started**: Use the sidebar to navigate through different sections and visualizations.")
+    st.write("Thanks for visiting :)")
