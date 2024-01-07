@@ -24,7 +24,7 @@ def show():
     fig = px.choropleth(
         df_national,
         locations='REGION_NAME', 
-        locationmode='USA',  # Location mode set to USA
+        locationmode='country names',  # Location mode set to USA
         color='MEDIAN_HOUSEHOLD_INCOME',  # Column for coloring
         color_continuous_scale='Greens',  # Color scale
         scope="usa",  # Focus the map on the USA
