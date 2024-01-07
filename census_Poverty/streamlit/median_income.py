@@ -43,6 +43,29 @@ def show():
 
         # Show the figure
         st.plotly_chart(fig, use_container_width=True)
+
+        # Scatter plot with Error Bars
+        fig = px.scatter(
+            df_national, 
+            x='REGION_NAME', 
+            y='MEDIAN_HOUSEHOLD_INCOME',
+            error_y='MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND',
+            error_y_minus='MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND',
+            labels={'REGION_NAME': 'Region', 'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
+            title='Median Household Income by Region with Confidence Intervals'
+        )
+
+        fig.update_traces(error_y=dict(type='data', symmetric=False))
+        
+        # Adjust the layout of the figure for better display
+        fig.update_layout(
+        margin=dict(l=0, r=0, t=50, b=0)  # Reducing the margin for full-width display
+        )
+
+        # Show the figure
+        st.plotly_chart(fig, use_container_width=True)
+
+        # Show underlying data
         st.write("Data:")
         st.dataframe(df_national[['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']])
 
