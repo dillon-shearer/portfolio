@@ -63,3 +63,26 @@ def show():
     st.plotly_chart(fig, use_container_width=True)
     
     st.write("-----")
+
+    df_county = df[df['REGION_TYPE'] == 'COUNTY']
+
+    # Create the choropleth map
+    fig = px.choropleth(
+        df_county,
+        locations='POSTAL_CODE', 
+        locationmode='USA',  # Location mode set to USA
+        color='MEDIAN_HOUSEHOLD_INCOME',  # Column for coloring
+        color_continuous_scale='Greens',  # Color scale
+        scope="usa",  # Focus the map on the USA
+        labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},  # Label for color scale
+        title='Median Income (County)'  # Title of the map
+    )
+    # Adjust the layout of the figure for better display
+    fig.update_layout(
+    margin=dict(l=0, r=0, t=50, b=0)  # Reducing the margin for full-width display
+    )
+
+    # Show the figure
+    st.plotly_chart(fig, use_container_width=True)
+    
+    st.write("-----")
