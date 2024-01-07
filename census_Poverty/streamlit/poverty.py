@@ -68,7 +68,7 @@ def show():
 
     # Create the choropleth map
     fig = px.choropleth(
-        df,
+        df_county,
         geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
         locations='FIPS_CODE',  # DataFrame column with FIPS codes
         color='MEDIAN_HOUSEHOLD_INCOME',  # DataFrame column with the data to visualize
