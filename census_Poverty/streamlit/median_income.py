@@ -27,6 +27,9 @@ def show():
     if map_level == "National":
         df_national = df[df['REGION_TYPE'] == 'NATIONAL']
 
+        df_national['error_upper'] = df_national['MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND'] - df_national['MEDIAN_HOUSEHOLD_INCOME']
+        df_national['error_lower'] = df_national['MEDIAN_HOUSEHOLD_INCOME'] - df_national['MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND']
+
         # Create the choropleth map
         fig = px.choropleth(
             df_national,
@@ -81,6 +84,9 @@ def show():
     elif map_level == "State":
         df_state = df[df['REGION_TYPE'] == 'STATE']
 
+        df_state['error_upper'] = df_state['MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND'] - df_state['MEDIAN_HOUSEHOLD_INCOME']
+        df_state['error_lower'] = df_state['MEDIAN_HOUSEHOLD_INCOME'] - df_state['MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND']
+
         # Create the choropleth map
         fig = px.choropleth(
             df_state,
@@ -133,6 +139,9 @@ def show():
 
     elif map_level == "County":
         df_county = df[df['REGION_TYPE'] == 'COUNTY']
+
+        df_county['error_upper'] = df_county['MEDIAN_HOUSEHOLD_INCOME_90_CI_UPPER_BOUND'] - df_county['MEDIAN_HOUSEHOLD_INCOME']
+        df_county['error_lower'] = df_county['MEDIAN_HOUSEHOLD_INCOME'] - df_county['MEDIAN_HOUSEHOLD_INCOME_90_CI_LOWER_BOUND']
 
         # Create the choropleth map for counties
         fig = px.choropleth(
