@@ -23,7 +23,7 @@ import streamlit as st
 st.markdown("""
     <style>
     .sidebar .sidebar-content {
-        color: #333;               /* Darker text for better readability */
+        color: #FFFFFF;               /* Darker text for better readability */
         font-family: 'Arial';      /* Modern font */
     }
     .css-1d391kg {
