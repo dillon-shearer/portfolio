@@ -33,7 +33,7 @@ def show():
             color='MEDIAN_HOUSEHOLD_INCOME',  # Column for coloring
             color_continuous_scale='Greens',  # Color scale
             scope="usa",  # Focus the map on the USA
-            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},  # Label for color scale
+            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 'REGION_NAME': 'Region Name'},  # Label for color scale
             title='Median Income',  # Title of the map
             hover_data=['REGION_NAME', 'MEDIAN_HOUSEHOLD_INCOME']  # Add this line to specify the tooltip content
         )
