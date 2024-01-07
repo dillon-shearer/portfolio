@@ -67,20 +67,26 @@ def show():
     df_county = df[df['REGION_TYPE'] == 'COUNTY']
 
     # Create the choropleth map for counties
+    # fig = px.choropleth(
+    #     df_county,
+    #     geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
+    #     locations='FIPS_CODE',
+    #     color='MEDIAN_HOUSEHOLD_INCOME',
+    #     color_continuous_scale='Greens',
+    #     scope='usa',
+    #     labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
+    #     title='Median Income (County)'
+    # )
+
+    # fig.update_geos(fitbounds="locations")
+    # fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
+    
     fig = px.choropleth(
         df_county,
         geojson="https://raw.githubusercontent.com/plotly/datasets/master/geojson-counties-fips.json",
         locations='FIPS_CODE',
-        color='MEDIAN_HOUSEHOLD_INCOME',
-        color_continuous_scale='Greens',
-        scope='usa',
-        labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income'},
-        title='Median Income (County)'
+        color='MEDIAN_HOUSEHOLD_INCOME'
     )
-
-    fig.update_geos(fitbounds="locations")
-    fig.update_layout(margin=dict(l=0, r=0, t=50, b=0), geo_scope='usa')
-    
     # Display in Streamlit
     st.plotly_chart(fig, use_container_width=True)
 
