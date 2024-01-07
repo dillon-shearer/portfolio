@@ -6,10 +6,12 @@ import home
 st.sidebar.title("Navigation")
 choice = st.sidebar.radio("Go to", ["Home", "Analysis"])
 
-# Page routing
-if choice == "Home":
-    home.show()
-elif choice == "Analysis":
-    analysis.show()
 
-st.show("test")
+if __name__ == "__main__":
+    # Page routing
+    if choice == "Home":
+        home.show()
+    elif choice == "Analysis":
+        analysis.show()
+
+    st.show("test")
