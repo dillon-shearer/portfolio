@@ -47,7 +47,7 @@ def display_county_data(df, selected_state_code, selected_state_name):
 
 # Main function for the analysis pages
 def show():
-    st.title("SAIPE Poverty/Income: Median Income x Poverty Plot")
+    st.title("SAIPE Poverty/Income: Median Income vs. Poverty Plot")
     st.write("*Explore a comprehensive and interactive analysis of poverty data intersecting with median income data across the United States.*")
     st.write("Dillon Shearer - 2024")
     st.write("------")
