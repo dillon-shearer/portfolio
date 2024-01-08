@@ -24,7 +24,8 @@ def display_county_data(df, selected_state_code, selected_state_name):
                             x='MEDIAN_HOUSEHOLD_INCOME', 
                             y='ALL_AGES_POVERTY_PERCENT', 
                             hover_data=['REGION_NAME'],
-                            labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 
+                            labels={'REGION_NAME': 'Region Name',
+                                    'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 
                                     'ALL_AGES_POVERTY_PERCENT': 'Poverty Percentage'},
                             title=f'County-Level Data for {selected_state_name}')
 
@@ -67,7 +68,8 @@ def show():
                            x='MEDIAN_HOUSEHOLD_INCOME', 
                            y='ALL_AGES_POVERTY_PERCENT', 
                            hover_data=['REGION_NAME'],
-                           labels={'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 
+                           labels={'REGION_NAME': 'Region Name',
+                                    'MEDIAN_HOUSEHOLD_INCOME': 'Median Household Income', 
                                    'ALL_AGES_POVERTY_PERCENT': 'Poverty Percentage'},
                            title='State-Level Median Household Income vs Poverty Percentage')
 
