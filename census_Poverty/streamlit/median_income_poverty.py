@@ -4,8 +4,7 @@ import pandas as pd
 
 # Function to load data
 def load_data():
-    # clean_data_filepath = 'census_Poverty/data/CLEANED_2022_SAIPE_DATA.xlsx'
-    clean_data_filepath = '/Users/dillon/Desktop/portfolio/census_Poverty/data/CLEANED_2022_SAIPE_DATA.xlsx'
+    clean_data_filepath = 'census_Poverty/data/CLEANED_2022_SAIPE_DATA.xlsx'
     df = pd.read_excel(clean_data_filepath, dtype={'FIPS_CODE': str})
     return df
 
