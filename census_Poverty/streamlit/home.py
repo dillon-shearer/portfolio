@@ -19,3 +19,5 @@ def show():
     st.write("-----")
     st.write("### **Get Started**: Use the sidebar to navigate through different sections and visualizations.")
     st.write("Thanks for visiting :)")
+    st.write("-----")
+    st.write("Source: *https://www.census.gov/data/datasets/2022/demo/saipe/2022-state-and-county.html*")
