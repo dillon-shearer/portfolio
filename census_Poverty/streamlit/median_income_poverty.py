@@ -40,8 +40,13 @@ def display_county_data(df, selected_state_code, selected_state_name):
     fig_county.add_annotation(y=state_avg_poverty, x=min(df_county['MEDIAN_HOUSEHOLD_INCOME']),
                               text=f"State Avg Poverty (%): {state_avg_poverty:.2f}%",
                               showarrow=False, xshift=-50)
+    
+    # Adjust the layout of the figure for better display
+    fig_county.update_layout(
+        margin=dict(l=0, r=0, t=50, b=0)  # Reducing the margin for full-width display
+        )
 
-    st.plotly_chart(fig_county)
+    st.plotly_chart(fig_county, use_container_width=True)
     return df_county
 
 
@@ -85,8 +90,13 @@ def show():
     fig_state.add_annotation(y=national_avg_poverty, x=min(df_state['MEDIAN_HOUSEHOLD_INCOME']),
                              text=f"National Avg Poverty (%): {national_avg_poverty:.2f}%",
                              showarrow=False, xshift=-50)
+    
+    # Adjust the layout of the figure for better display
+    fig_state.update_layout(
+        margin=dict(l=0, r=0, t=50, b=0)  # Reducing the margin for full-width display
+        )
 
-    st.plotly_chart(fig_state)
+    st.plotly_chart(fig_state, use_container_width=True)
 
     # Create session state for displaying county data
     if 'display_county_data' not in st.session_state:
