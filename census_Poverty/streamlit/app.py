@@ -3,6 +3,7 @@ import home
 import poverty
 import median_income
 import analysis
+import median_income_poverty
 
 # Set page configuration
 st.set_page_config(
@@ -45,7 +46,7 @@ st.markdown("""
 
 # Sidebar navigation
 st.sidebar.title("Navigation")
-choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Analysis"])
+choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Median Income x Poverty Plots", "Analysis"])
 
 # Footer or additional information
 st.sidebar.markdown("---")
@@ -61,3 +62,5 @@ if __name__ == "__main__":
         median_income.show()
     elif choice == "Analysis":
         analysis.show()
+    elif choice == "Median Income vs. Poverty Plots":
+        median_income_poverty.show()
