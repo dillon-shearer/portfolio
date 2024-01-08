@@ -42,6 +42,7 @@ def display_county_data(df, selected_state_code, selected_state_name):
                               showarrow=False, xshift=-50)
 
     st.plotly_chart(fig_county)
+    return df_county
 
 
 # Main function for the analysis pages
@@ -107,11 +108,6 @@ def show():
 
     # Display county data based on session state
     if st.session_state.display_county_data:
-        display_county_data(df, selected_state_code, selected_state_name)
-
-    st.write("State data:")
-    st.dataframe(df_state)
-
-    if st.button("Show County Data"):
-        st.write("County data:")
-        st.dataframe(df_county)
+        county_data = display_county_data(df, selected_state_code, selected_state_name)
+        st.write("County-Level Data:")
+        st.dataframe(county_data[['REGION_NAME', 'ALL_AGES_POVERTY_PERCENT', 'MEDIAN_HOUSEHOLD_INCOME']])
