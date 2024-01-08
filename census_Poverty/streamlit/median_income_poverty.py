@@ -108,3 +108,9 @@ def show():
     # Display county data based on session state
     if st.session_state.display_county_data:
         display_county_data(df, selected_state_code, selected_state_name)
+
+    st.write("State data:")
+    st.dataframe(df_state)
+
+    st.write("County data:")
+    st.dataframe(df_county)
