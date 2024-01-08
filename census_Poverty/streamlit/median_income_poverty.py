@@ -4,7 +4,8 @@ import pandas as pd
 
 # Function to load data
 def load_data():
-    clean_data_filepath = 'census_Poverty/data/CLEANED_2022_SAIPE_DATA.xlsx'
+    # clean_data_filepath = 'census_Poverty/data/CLEANED_2022_SAIPE_DATA.xlsx'
+    clean_data_filepath = '/Users/dillon/Desktop/portfolio/census_Poverty/data/CLEANED_2022_SAIPE_DATA.xlsx'
     df = pd.read_excel(clean_data_filepath, dtype={'FIPS_CODE': str})
     return df
 
@@ -85,10 +86,24 @@ def show():
 
     st.plotly_chart(fig_state)
 
-    # Handling click event
-    # Use state names in the selector, but store and use postal codes internally
+    # Create session state for displaying county data
+    if 'display_county_data' not in st.session_state:
+        st.session_state.display_county_data = False
+
+    # Use state names in the selector
     selected_state_name = st.selectbox('Select a State', options=list(state_name_mapping.values()))
     selected_state_code = [code for code, name in state_name_mapping.items() if name == selected_state_name][0]
 
-    if st.button('Show County Data'):
+    # Inline buttons for showing and clearing county data
+    col1, col2, _ = st.columns([1, 1, 3.8])  # The underscore '_' is used to ignore the third column
+    with col1:
+        if st.button('Show County Data'):
+            st.session_state.display_county_data = True
+    # Apply custom style to the 'Clear' button
+    with col2:
+        if st.button('Clear', key="clear_button"):
+            st.session_state.display_county_data = False
+
+    # Display county data based on session state
+    if st.session_state.display_county_data:
         display_county_data(df, selected_state_code, selected_state_name)
