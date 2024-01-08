@@ -112,5 +112,6 @@ def show():
     st.write("State data:")
     st.dataframe(df_state)
 
-    st.write("County data:")
-    st.dataframe(df_county)
+    if st.button("Show County Data"):
+        st.write("County data:")
+        st.dataframe(df_county)
