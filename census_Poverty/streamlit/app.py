@@ -46,7 +46,7 @@ st.markdown("""
 
 # Sidebar navigation
 st.sidebar.title("Navigation")
-choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Median Income x Poverty Plots", "Analysis"])
+choice = st.sidebar.radio("Go to", ["Home", "Poverty Map", "Median Income Map", "Median Income vs. Poverty Plots", "Analysis"])
 
 # Footer or additional information
 st.sidebar.markdown("---")
