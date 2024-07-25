@@ -31,3 +31,6 @@ Desktop.ini
 # Git-specific files
 .git/
 .gitignore
+
+# Allow SQLite databases in specific directory
+!prescription_Drugs_SQL/data/*.db
