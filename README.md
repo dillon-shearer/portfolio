@@ -1,6 +1,6 @@
-# Data Analytics Portfolio
+# Dillon Shearer || Data Science/Analytics
 
-Welcome to my data analytics portfolio! This repository contains a collection of my projects and case studies in data analytics, along with descriptions of my skills and experience in this field.
+Welcome to my data science and analytics portfolio! This repository contains a collection of my projects and case studies in data science/analytics, along with descriptions of my skills and experience in this field.
 
 ## About Me
 
