@@ -1,2 +1,2 @@
-# Ignore macOS .dstore files
-.dstore
+# macOS specific files
+.DS_Store
