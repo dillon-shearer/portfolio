@@ -1,2 +1,39 @@
 # macOS specific files
 .DS_Store
+
+# Dev container configuration
+.devcontainer/
+
+# Python specific files
+__pycache__/
+*.py[cod]
+*.pyo
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# Virtual environments
+venv/
+.env/
+env/
+
+# SQL database files
+*.db
+
+# Logs
+*.log
+
+# Ignore data files
+data/
+
+# Ignore any sensitive information
+config.yaml
+credentials.json
+
+# Ignore system-specific files
+Thumbs.db
+Desktop.ini
+
+# Git-specific files
+.git/
+.gitignore
