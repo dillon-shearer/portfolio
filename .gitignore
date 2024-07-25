@@ -20,9 +20,6 @@ env/
 # Logs
 *.log
 
-# Ignore data files
-data/
-
 # Ignore any sensitive information
 config.yaml
 credentials.json
