@@ -7,13 +7,19 @@ Welcome to my data analytics portfolio! This repository contains a collection of
 I am a data analyst with experience in data visualization, curation, analysis, and modeling. I have a strong background in both Information Systems and Statistics/Mathematics. I am passionate about using data to solve complex problems, drive business value, and achieve favorable outcomes in the Healthcare space.
 
 ## Skills
-
+- **Programming Languages**: Python, SQL, R
+- **Data Analysis and Visualization**: Pandas, Matplotlib, Seaborn, Tableau, Power BI
+- **Machine Learning**: Scikit-learn, TensorFlow
+- **Database Management**: MySQL, PostgreSQL, SnowSQL
+- **Tools**: Jupyter, Git, Excel
 
 ## Projects
-
+#### [Census SAIPE Analysis](https://github.com/dillon-shearer/portfolio/tree/main/census_Poverty)
 
 ## Contact
+For more information or collaboration, feel free to reach out:
 
-If you would like to learn more about my work or discuss potential opportunities, please feel free to contact me at dillshearer@outlook.com. I am always open to new challenges and collaborations in the field of data analytics.
+- **Email**: [dillshearer@outlook.com](mailto:dillshearer@outlook.com)
+- **Phone**: 470-454-3924
 
 Thank you for visiting my portfolio! I hope you enjoy exploring my work.
