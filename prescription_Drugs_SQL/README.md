@@ -1,8 +1,11 @@
-# **Dillon Shearer** || Prescriptions Database Project
+# Prescriptions Database Project
 
 ## Overview
 
 This project involves creating and analyzing a prescriptions database to provide insights into prescription patterns, costs, and potential issues related to specific medications, such as opioids. The project includes scripts to create and populate the database, verify data insertion, and perform exploratory data analysis (EDA).
+
+## Source:
+`https://data.cms.gov/provider-summary-by-type-of-service/medicare-part-d-prescribers/medicare-part-d-prescribers-by-provider-and-drug`
 
 ## Project Structure
 
