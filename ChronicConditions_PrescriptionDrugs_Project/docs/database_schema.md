@@ -18,13 +18,13 @@ This table contains the final merged dataset of chronic conditions and their cor
 | **GEO_VALUE**     | TEXT      | The specific geographic region (e.g., state name, county name).             |
 | **Measure**       | TEXT      | The full name of the chronic condition (e.g., "Diabetes", "Hypertension").  |
 | **Measure_Short** | TEXT      | A shorthand version of the chronic condition name (e.g., "Diabetes", "CKD").|
-| **Weighted_Average** | REAL  | The weighted average of the measure across the geographic region.           |
+| **Weighted_Average** | REAL   | The weighted average of the measure across the geographic region.           |
 | **Total_Population** | INTEGER | The total population in the geographic region.                              |
 | **Brnd_Name**     | TEXT      | The brand name of the prescribed drug (if available).                       |
-| **Gnrc_Name**     | TEXT      | The generic name of the prescribed drug.                                     |
-| **Tot_Clms**      | INTEGER   | The total number of claims for the drug.                                     |
-| **Tot_Drug_Cst**  | REAL      | The total cost associated with the drug claims.                              |
-| **Tot_Benes**     | INTEGER   | The total number of beneficiaries receiving the drug.                        |
+| **Gnrc_Name**     | TEXT      | The generic name of the prescribed drug.                                    |
+| **Tot_Clms**      | INTEGER   | The total number of claims for the drug.                                    |
+| **Tot_Drug_Cst**  | REAL      | The total cost associated with the drug claims.                             |
+| **Tot_Benes**     | INTEGER   | The total number of beneficiaries receiving the drug.                       |
 
 ---
 
@@ -32,5 +32,30 @@ This table contains the final merged dataset of chronic conditions and their cor
 
 ### 1. **Count Total Rows in `final_merged_data` Table:**
 
-```sql
-SELECT COUNT(*) AS total_rows FROM final_merged_data;
+`SELECT COUNT(*) AS total_rows FROM final_merged_data;`
+
+### 2. **Retrieve Sample Data from `final_merged_data` Table:**
+
+`SELECT * FROM final_merged_data LIMIT 5;`
+
+### 3. **Find All Records for a Specific Condition (e.g., "Diabetes"):**
+
+`SELECT * FROM final_merged_data WHERE Measure_Short = 'Diabetes';`
+
+### 4. **Calculate Total Drug Costs by Condition:**
+
+`SELECT Measure_Short, SUM(Tot_Drug_Cst) AS Total_Cost FROM final_merged_data GROUP BY Measure_Short;`
+
+---
+
+## Additional Notes
+
+- The `final_merged_data` table is designed to store data that combines chronic conditions with their corresponding prescription drugs across different geographic regions.
+- The data types and column names are chosen to reflect the structure and content of the merged CDC and CMS datasets.
+
+---
+
+## How to Use
+
+1. **Load Data**: Use the provided SQL scripts to load data into the `final_merged_data` table.
+2. **Run Queries**: Utilize the example queries to explore and analyze the data within the database.
