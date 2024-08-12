@@ -40,6 +40,15 @@ I am a data analyst with experience in data visualization, curation, analysis, a
 
 - **Repository**: [Census SAIPE Analysis](https://github.com/dillon-shearer/portfolio/tree/main/census_Poverty)
 
+#### **State-by-State Analysis of Chronic Condition Drug Utilization and Costs**
+- **Objective**: Analyze drug utilization patterns, total costs, and average costs per claim for chronic conditions across the U.S. states.
+- **Tools Used**: Python, Pandas, SQLite, Matplotlib, Seaborn
+- **Methodology**: Data integration from CMS and CDC, followed by data cleaning, standardization, and per capita adjustments.
+- **Key Findings**:
+  - **High Total Claims**: States like California, Texas, and Florida exhibit the highest total claims and costs.
+  - **Cost Efficiency**: Smaller states with higher per capita claims indicate significant healthcare burdens relative to population size.
+  - **Policy Implications**: Insights suggest targeted healthcare strategies and resource allocation based on both raw and per capita metrics.
+
 ## Contact
 For more information or collaboration, feel free to reach out:
 
