@@ -103,3 +103,12 @@ erDiagram
     cms_data ||--o{ final_merged_data : "joined"
     condition_drug_mapping ||--|| cdc_data : "maps to"
     condition_drug_mapping ||--|| cms_data : "maps to"
+```
+
+#### Explanation
+
+- cdc_data: Represents the CDC chronic condition data.
+- cms_data: Represents the CMS prescription drug data.
+- condition_drug_mapping: Serves as a mapping table connecting conditions to drugs.
+- final_merged_data: The final table where all relevant data is merged and transformed.
+**This ERD describes the flow from source data (CDC and CMS) through the transformation process (mapping) to the final merged data table.**
