@@ -49,6 +49,7 @@ I am a data analyst with experience in data visualization, curation, analysis, a
   - **High Total Claims**: States like California, Texas, and Florida exhibit the highest total claims and costs.
   - **Cost Efficiency**: Smaller states with higher per capita claims indicate significant healthcare burdens relative to population size.
   - **Policy Implications**: Insights suggest targeted healthcare strategies and resource allocation based on both raw and per capita metrics.
+- **Repository**: [State-by-State Analysis of Chronic Condition Drug Utilization and Costs](https://github.com/dillon-shearer/portfolio/tree/main/ChronicConditions_PrescriptionDrugs_Project)
 
 ---
 
