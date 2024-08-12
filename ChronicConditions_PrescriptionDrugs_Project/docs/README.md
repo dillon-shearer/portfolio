@@ -36,11 +36,11 @@ This project provides a comprehensive analysis of drug utilization patterns, tot
 - **Jupyter Notebook**: For interactive analysis and presentation.
 
 ## **Project Structure**
-````data/`: Contains the raw and processed data files.
+`data/`: Contains the raw and processed data files.
 `notebooks/`: Jupyter notebooks with the analysis, visualizations, and SQL operations.
 `scripts/`: Python scripts for data cleaning, transformation, and analysis.
 `requirements.txt`: Lists the Python dependencies required to run the project.
-`README.md`: Overview of the project, key features, and instructions.```
+`README.md`: Overview of the project, key features, and instructions.
 
 ## **How to Run the Project**
 1. **Clone the Repository**:
