@@ -2,10 +2,12 @@
 
 Welcome to my data science and analytics portfolio! This repository contains a collection of my projects and case studies in data science/analytics, along with descriptions of my skills and experience in this field.
 
-## About Me
+---
 
+## About Me
 I am a data analyst with experience in data visualization, curation, analysis, and modeling. I have a strong background in both Information Systems and Statistics/Mathematics. I am passionate about using data to solve complex problems, drive business value, and achieve favorable outcomes in the Healthcare space.
 
+---
 ## Skills
 - **Programming Languages**: Python, SQL, R
 - **Data Analysis and Visualization**: Pandas, Matplotlib, Seaborn, Tableau, Power BI
@@ -13,6 +15,7 @@ I am a data analyst with experience in data visualization, curation, analysis, a
 - **Database Management**: MySQL, PostgreSQL, SnowSQL
 - **Tools**: Jupyter, Git, Excel
 
+---
 ## Projects
 
 #### 2022 SAIPE Estimates Analysis
@@ -40,6 +43,8 @@ I am a data analyst with experience in data visualization, curation, analysis, a
 
 - **Repository**: [Census SAIPE Analysis](https://github.com/dillon-shearer/portfolio/tree/main/census_Poverty)
 
+---
+
 #### **State-by-State Analysis of Chronic Condition Drug Utilization and Costs**
 - **Objective**: Analyze drug utilization patterns, total costs, and average costs per claim for chronic conditions across the U.S. states.
 - **Tools Used**: Python, Pandas, SQLite, Matplotlib, Seaborn
@@ -48,6 +53,8 @@ I am a data analyst with experience in data visualization, curation, analysis, a
   - **High Total Claims**: States like California, Texas, and Florida exhibit the highest total claims and costs.
   - **Cost Efficiency**: Smaller states with higher per capita claims indicate significant healthcare burdens relative to population size.
   - **Policy Implications**: Insights suggest targeted healthcare strategies and resource allocation based on both raw and per capita metrics.
+
+---
 
 ## Contact
 For more information or collaboration, feel free to reach out:
