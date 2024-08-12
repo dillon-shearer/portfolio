@@ -20,9 +20,6 @@ heart_data <- heart_data %>%
 # Drop rows with missing values
 heart_data <- na.omit(heart_data)
 
-# Summary of the cleaned dataset
-summary(heart_data)
-
 # Create the directory if it doesn't exist
 if (!dir.exists("heart_Disease_Analysis/data")) {
   dir.create("data")
