@@ -1,0 +1,14 @@
+# For making HTTP requests (used in tts_elevenlabs.py)
+requests>=2.25.1
+
+# For using OpenAI's Whisper API (used in whisper_transcription.py)
+openai>=0.27.0
+
+# For fetching Reddit posts (likely used in reddit_puller.py)
+praw>=7.6.0
+
+# For video processing (used in video_assembler.py/video_library.py)
+moviepy>=1.0.3
+
+# Optional: For loading environment variables from a .env file if you use python-dotenv
+python-dotenv>=0.21.0
