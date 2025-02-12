@@ -18,6 +18,19 @@ I am a data analyst with experience in data visualization, curation, analysis, a
 ---
 ## Projects
 
+#### **Reddit TikTok Script**
+- **Objective**: Automate the creation of TikTok-ready videos by fetching Reddit posts, converting text to speech, transcribing audio, and assembling the final video.
+- **Tools Used**: Python, Requests, OpenAI (Whisper API), ElevenLabs API, PRAW, MoviePy
+- **Methodology**: 
+  - **Data Fetching**: Retrieves Reddit posts from a specified subreddit.
+  - **Audio Generation**: Converts the fetched text to high-quality audio using the ElevenLabs API.
+  - **Transcription**: Uses OpenAI’s Whisper API to generate subtitles with word-level granularity.
+  - **Video Assembly**: Combines video clips, the generated audio, and subtitles into a final TikTok-ready video.
+- **Key Features**:
+  - **End-to-End Automation**: Seamless pipeline from content retrieval to final video production.
+  - **Customizable Pipeline**: Command-line arguments allow users to set the subreddit, batch count, and test text.
+- **Repository**: [Reddit TikTok Script](https://github.com/dillon-shearer/reddit-tiktok-script)
+
 #### 2022 SAIPE Estimates Analysis
 - **Objective**: Analyze and visualize Small Area Income and Poverty Estimates (SAIPE).
 - **Tools Used**: Python, Pandas, Matplotlib, Seaborn
